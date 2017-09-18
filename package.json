@@ -1,0 +1,28 @@
+{
+  "name": "expo-e-dev-challenge",
+  "version": "1.0.2",
+  "description": "Exponential-e developer technical challenge",
+  "main": "index.html",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha -b",
+    "start": "node prod/server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ee-jake-d/expo-e-dev-challenge.git"
+  },
+  "author": "Jake Dowie <jake.dowie@exponential-e.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daveJS133/expo-e-dev-challenge/issues"
+  },
+  "homepage": "https://github.com/daveJS133/expo-e-dev-challenge#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "express": "^4.7.2",
+    "mongoose": "^4.4.12",
+    "body-parser": "^1.5.2"
+  }
+
+}
