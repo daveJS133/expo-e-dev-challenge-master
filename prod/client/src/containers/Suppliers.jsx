@@ -1,5 +1,5 @@
 import React from 'react';
-import PeopleList from '../components/SuppliersList.jsx';
+import SupplierList from '../components/SuppliersList.jsx';
 
 class Supplier extends React.Component{
   constructor() {

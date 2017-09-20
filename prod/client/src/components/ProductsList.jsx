@@ -1,5 +1,5 @@
 import React from 'react';
-import Person from './Product.jsx';
+import Product from './Product.jsx';
 
 const ProductList = ({product}) => {
   const productEach = product.map((product, index) => {
