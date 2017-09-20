@@ -9,6 +9,7 @@ import Suppliers from './containers/Suppliers.jsx';
 
 window.onload = () => {
   render(
+    
     <Router history={hashHistory}>
     <Route path='/' component={Main}>
     <IndexRoute component={Home} />
