@@ -12,4 +12,4 @@ var productSchema = mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model("Supplier", supplierSchema);
+module.exports = mongoose.model("Product", productSchema);
