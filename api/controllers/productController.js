@@ -13,8 +13,6 @@ exports.list_all_products = function(req, res) {
 };
 
 
-
-
 exports.create_a_product = function(req, res) {
   var new_product = new Product(req.body);
   new_product.save(function(err, product) {
