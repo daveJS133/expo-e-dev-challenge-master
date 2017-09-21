@@ -5,7 +5,7 @@ var supplierSchema = mongoose.Schema({
     products: [{
         id: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "Supplier"
+            ref: "Product"
         },
         name:String
     }]
