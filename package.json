@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp watch"
+    "start": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
@@ -38,6 +38,7 @@
     "gulp-if-else": "^1.0.3",
     "gulp-uglify": "^1.5.3",
     "jquery": "^2.2.2",
+    "nodemon": "^1.12.1",
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
     "react-router": "^2.0.1",
@@ -45,5 +46,8 @@
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.15.4",
+    "mongoose": "^4.11.12"
+  }
 }
