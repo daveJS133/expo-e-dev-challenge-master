@@ -26,7 +26,7 @@ exports.create_a_supplier = function(req, res) {
 
 
 exports.read_a_supplier = function(req, res) {
-  Supplier.findById(req.params.supplierId, function(err, supplier) {
+  Supplier.findById(req.params.id, function(err, supplier) {
     if (err)
       res.send(err);
     res.json(supplier);
@@ -35,7 +35,7 @@ exports.read_a_supplier = function(req, res) {
 
 
 exports.update_a_supplier = function(req, res) {
-  Supplier.findOneAndUpdate({_id: req.params.supplierId}, req.body, {new: true}, function(err, supplier) {
+  Supplier.findOneAndUpdate({_id: req.params.id}, req.body, {new: true}, function(err, supplier) {
     if (err)
       res.send(err);
     res.json(supplier);
@@ -47,7 +47,7 @@ exports.delete_a_supplier = function(req, res) {
 
 
   Supplier.remove({
-    _id: req.params.supplierId
+    _id: req.params.id
   }, function(err, supplier) {
     if (err)
       res.send(err);

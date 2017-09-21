@@ -5,6 +5,7 @@ var express = require('express'),
   Product = require('./api/models/productModel'),
   Supplier = require('./api/models/supplierModel'),
   bodyParser = require('body-parser');
+  var apiRoutes = require('./api/routes/api'); 
   
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
@@ -15,8 +16,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-var routes = require('./api/routes/api'); 
-routes(app); 
+
+ app.use('/api/v1', apiRoutes)
 
 app.use(function(req, res) {
   res.status(404).send({url: req.originalUrl + ' not found'})

@@ -2,36 +2,44 @@
 
 let router = require('express').Router()
 let productController = require('../controllers/productController')
-let supplerController = require('../controllers/supplierController')
+let supplierController = require('../controllers/supplierController')
 
-router.param('productId', productController.productId)
-router.param('supplierId', supplierController.supplierId)
 
-router.route('/api/v1/')
+
+if(productController.id){
+  router.param('id', productController.id)
+}else if(supplierController.id){
+  router.param('id', supplierController.id)
+}else{
+  return console.log("param id is undefined")
+}
+
+
+router.route('/')
   .get(productController.listAll)
 
 
-router.route('/api/v1/products')
+router.route('/products')
   .get(productController.getProducts)
   .post(productController.new)
 
 
 
 
-  router.route('/api/v1/products:productId')
+  router.route('/products:id')
   .get(productController.getOneProduct)
   .put(productController.update)
   .delete(productController.delete)
 
 
-  router.route('/api/v1/suppliers')
+  router.route('/suppliers')
     .get(supplierController.getSuppliers)
     .post(supplierController.new)
     .delete(supplierController.delete)
 
 
 
-    router.route('/api/v1/suppliers:supplierId')
+    router.route('/suppliers:id')
     .get(supplierController.getOneSupplier)
     .put(supplierController.update)
     .delete(supplierController.delete)
