@@ -2,7 +2,7 @@
 
 
 var mongoose = require('mongoose'),
-  Supplier = mongoose.model('Suppliers');
+  Supplier = mongoose.model('Supplier');
 
 exports.list_all_suppliers = function(req, res) {
   Supplier.find({}, function(err, supplier) {
