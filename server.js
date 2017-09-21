@@ -18,5 +18,9 @@ app.use(bodyParser.json());
 var routes = require('./api/routes/api'); 
 routes(app); 
 
+app.use(function(req, res) {
+  res.status(404).send({url: req.originalUrl + ' not found'})
+});
+
 
 app.listen(port);
